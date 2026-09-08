@@ -63,5 +63,5 @@ You can directly open and execute any Jupyter Notebook in Google Colab by clicki
 ### Running Locally
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git)
-   cd YOUR_REPO_NAME
+   git clone [https://github.com/camilacostav01-oss/AI-in-physics-projects.git](https://github.com/camilacostav01-oss/AI-in-physics-projects.git)
+   cd AI-in-physics-projects
