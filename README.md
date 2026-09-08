@@ -25,7 +25,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 * **Key Features:**
   *  Random Forest, Gradient Boosting, XGBoost, and CatBoost.
 * **Notebooks:**
-  * [Early prediction of gallstone disease](AI simulations in physics/Proyecto_final.ipynb) 
+  * [Early prediction of gallstone disease](AIsimulationsinphysics/Proyecto_final.ipynb) 
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/main/AI%20simulations%20in%20physics/Proyecto_final.ipynb)
 
 ---
