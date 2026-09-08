@@ -36,7 +36,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 * **Key Features:**
   * Creation of a geometry and visualization of MCNP tally outputs (fluence, absorbed dose, and secondary particle spectra)
 * **Notebooks / Scripts:**
-  * [MCNP Tally Data Extractor & Plotter](mcnp-simulations/radiation-soft-tissue)
+  * [MCNP geometry and Tally](mcnp-simulations/radiation-soft-tissue)
 
 ---
 
