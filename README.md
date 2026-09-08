@@ -19,7 +19,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ## Repository Structure & Projects
 
-### 🔬 1. Radiobiology & Biophysical Modeling
+### 1. Radiobiology & Biophysical Modeling
 * **Directory:** `AI simulations in physics/`
 * **Description:** Implementation and analysis of biophysical models for radiotherapy and hadrontherapy applications.
 * **Key Features:**
@@ -30,7 +30,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ---
 
-### ⚛️ 2. Radiation Transport & Monte Carlo Simulations
+### 2. Radiation Transport & Monte Carlo Simulations
 * **Directory:** `mcnp-simulations/`
 * **Description:** Configuration of Monte Carlo radiation transport simulations.
 * **Key Features:**
@@ -40,7 +40,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ---
 
-### 📊 3. Experimental Physics & Spectroscopic Data Analysis
+### 3. Experimental Physics & Spectroscopic Data Analysis
 * **Directory:** `experimental-data-analysis/`
 * **Description:** Signal processing, thermal diffusivity estimation, and spectrophotometric data analysis.
 * **Key Features:**
