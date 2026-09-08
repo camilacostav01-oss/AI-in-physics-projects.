@@ -26,7 +26,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
   *  Random Forest, Gradient Boosting, XGBoost, and CatBoost.
 * **Notebooks:**
   * [LET-Dependent RBE Analysis](AI simulations in physics/Proyecto_final.ipynb) 
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/radiobiology/rbe_let_curve_fitting.ipynb](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/94ff4bd3d67ac55babb2b54cdfdd323bf9af26c0/AI%20simulations%20in%20physics/Proyecto_final.ipynb))
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([[https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/radiobiology/rbe_let_curve_fitting.ipynb](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/94ff4bd3d67ac55babb2b54cdfdd323bf9af26c0/AI%20simulations%20in%20physics/Proyecto_final.ipynb)](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/0f75b15921860afacce4bf091866deaa40bab14c/AI%20simulations%20in%20physics/Proyecto_final.ipynb))
 
 ---
 
