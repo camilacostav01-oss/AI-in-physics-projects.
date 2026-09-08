@@ -1,0 +1,107 @@
+Final exam - Verified Macrobodies Version
+C ************************************************************
+C CELL DEFINITIONS
+C ************************************************************
+C 1: Tissue layer (innermost)
+1 1 -1.0    -1        imp:p,e=64  $ Tissue: r<4.9, |z|<0.01
+C 2: Culture medium (surrounds tissue)
+2 3 -1.0    -2 #1     imp:p,e=32  $ Culture: r<4.9, 0.01<|z|<0.5
+C 3: Air gaps above and below culture (inside plexiglass)
+3 5 -0.001  -3 #2 #1  imp:p,e=16  $ Air inside: r<4.9, 0.5<|z|<1.5
+C 4: Plexiglass shell (1mm thick)
+4 4 -1.2    -4 #3     imp:p,e=8   $ Plexiglass: 4.9<r<5.0, |z|<1.5
+C 7: Air surrounding connector (between plexiglass and polyethylene)
+7 5 -0.001  -10 #4    imp:p,e=4   $ Air around: 5.0<r<15.0, |z|<1.5
+C 5: Polyethylene cylinder 1 (top)
+5 6 -0.9    -5        imp:p,e=4   $ Poly 1: r<15.0, 1.5<z<31.5
+C 6: Polyethylene cylinder 2 (bottom)
+6 6 -0.9    -6        imp:p,e=4   $ Poly 2: r<15.0, -31.5<z<-1.5
+C 8: Air outside polyethylene, inside lead box
+8 5 -0.001  -7 #5 #6 #10  imp:p,e=1   $ Outer air
+C 9: Lead shielding
+9 2 -11.3   -8 #7     imp:p,e=1   $ Lead walls
+C 10: Void outside
+10 0         8:-8:7:-7:6:-6  imp:p,e=0   $ Outside world
+
+C ************************************************************
+C MACROBODY DEFINITIONS
+C ************************************************************
+C Tissue: 200 microns thick, radius 4.9 cm (inside plexiglass)
+C z = -0.01 to +0.01
+1 RCC 0 0 -0.01 0 0 0.02 4.9       $ Tissue layer
+C Culture medium boundary: 1 cm thick, radius 4.9 cm
+C z = -0.5 to +0.5
+2 RCC 0 0 -0.5  0 0 1.0  4.9       $ Culture medium outer
+C Inner air volume: fills to plexiglass inner wall, 3 cm height
+C z = -1.5 to +1.5, r = 4.9 cm
+3 RCC 0 0 -1.5  0 0 3.0  4.9       $ Inner air/culture volume
+C Plexiglass shell: outer boundary, 5 cm radius, 3 cm height
+C 1mm thick (5.0 - 4.9 = 0.1 cm)
+C z = -1.5 to +1.5, r = 5.0 cm
+4 RCC 0 0 -1.5  0 0 3.0  5.0       $ Plexiglass outer
+C Polyethylene 1: top cylinder, 30 cm height, 15 cm radius
+C z = 1.5 to 31.5
+5 RCC 0 0 1.5   0 0 30.0 15.0      $ Polyethylene 1 (top)
+C Polyethylene 2: bottom cylinder, 30 cm height, 15 cm radius
+C z = -31.5 to -1.5
+6 RCC 0 0 -31.5 0 0 30.0 15.0      $ Polyethylene 2 (bottom)
+C Large cylinder for air gap around connector: 15 cm radius, 3 cm height
+C z = -1.5 to +1.5
+10 RCC 0 0 -1.5 0 0 3.0  15.0      $ Large cylinder at center region
+C Air box: 70x70 cm base, height covering -31.6 to +31.6
+C Slightly taller than poly cylinders to contain them
+7 RPP -35.0 35.0 -35.0 35.0 -31.6 31.6   $ Air box
+C Lead box: 110x110x103 cm (20 cm thick walls on all sides)
+C x,y: -55 to +55 (70 + 2*20 = 110)
+C z: -51.5 to +51.5 (31.5 + 20 = 51.5)
+8 RPP -55.0 55.0 -55.0 55.0 -51.5 51.5   $ Lead shielding
+
+
+C ************************************************************
+C MATERIALS
+C ************************************************************
+M1 06012.12p -0.24 01001.12p -0.10 08016.12p -0.64 07014.12p -0.02  $ Tissue
+M2 82207.12p 1.0                                                    $ Lead
+M3 01001.12p 2 08016.12p 1                                          $ Water (culture)
+M4 06012.12p 5 08016.12p 2 01001.12p 8                              $ Plexiglass
+M5 07014.12p -0.78 08016.12p -0.21 18000.42c -0.01                  $ Air
+M6 06012.12p 2 01001.12p 4                                          $ Polyethylene
+C ************************************************************
+C SOURCE
+C ************************************************************
+MODE p e
+C Main source definition
+SDEF POS=D1 RAD=D2 ERG=0.08 DIR=1 VEC=D3 PAR=p
+C Position distribution: two points (top and bottom)
+SI1 L 0 0 31.5 0 0 -31.5
+SP1   0.5      0.5
+C Radial distribution: uniform over disk, radius 0 to 10 cm
+SI2   0 10
+SP2  -21 2
+C Direction vector distribution: dependent on position
+C D3 selects SI4 or SI5 based on which position was chosen
+SI3 L 4 5           $ Distribution numbers for VEC
+SP3   1  1          $ Each with probability 1 (deterministic based on POS)
+C Direction for top source (index 4): downward
+SI4 L 0 0 -1
+SP4   1
+C Direction for bottom source (index 5): upward  
+SI5 L 0 0 1
+SP5   1
+C ************************************************************
+C TALLIES
+C ************************************************************
+C Tally 4: Photon fluence in tissue with energy spectrum
+F4:P 1
+E4 0 0.0025 0.05 0.08
+C Tally 14: Electron fluence in tissue (different tally number!)
+F14:E 1
+C Tally 6: Photon dose in tissue
+*F6:P 1
+C Tally 8: Electron energy deposition in tissue
+*F8:E 1
+PHYS:P 0.08
+PHYS:E 0.08 15 7J 1
+CUT:E J 0.001
+NPS 100000000
+PRINT 110
