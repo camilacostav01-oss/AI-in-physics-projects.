@@ -3,8 +3,7 @@ from scipy.optimize import curve_fit
 import sys
 
 # --- TARGETS FOR U87 (From your papers) ---
-# Replace with your actual values and errors  	0.103864 	0.112751 	0.019873 	0.028736
-#0.550884 	0.023231 	0.003544 	0.006132
+# Replace with the current values and errors  	
 target_alpha = 0.11
 alpha_err    = 0.028  
 target_beta  = 0.06
@@ -15,16 +14,11 @@ def lq_model(D, a, b):
 
 def analyze():
     try:
-        # 1. Use genfromtxt
-        # Column 0: Dose
-        # Column 14: S(pois) <- This is a common survival metric
-        # Column 16: NSENZA <- Based on your file, this is the 17th column
         data = np.genfromtxt('Step_Aberr.dat', 
                             skip_header=1, 
                             usecols=(0, 15), # Changed 14 to 16
                             invalid_raise=False)
 
-        # Now 'data' only has two columns. 
         # Column 0 is Dose, Column 1 is NSENZA
         doses = data[:, 0]
         survival = data[:, 1] # This is now the 2nd column of our filtered data
@@ -55,29 +49,5 @@ def analyze():
 if __name__ == "__main__":
     analyze()
     
-    
-# Results with U87
-#Testing CL=2.2 and f=0.035
-#RESULT: a=0.1089, b=0.0532 | Weighted Error=0.6844
-#Doses read: [0.  1.5 3.  4.5 7. ]
-#Survival read: [1.     0.7621 0.4361 0.2112 0.0459]
-
-#    # -------------------Definition of surv_function (with LQM)-----------------
-#        def surv_function(Dose, alpha, beta):
-#            SF = np.exp(-(alpha * Dose + beta * Dose * Dose))
-#            return SF
-#
-#    # ----------------- Fit and chi square test-------------------
-#        optimizedParameters, cov = opt.curve_fit(surv_function, Dose, NSENZA, sigma=abs_unc_NSENZA, absolute_sigma=True)
-#
-#       alpha = optimizedParameters[0]
-#        beta = optimizedParameters[1]
-#
-#        #calculation of alpha_err and beta_err
-#        perr = np.sqrt(np.diag(cov))
-#        alpha_err = perr[0]
-#        beta_err = perr[1]
-
-
 
 
