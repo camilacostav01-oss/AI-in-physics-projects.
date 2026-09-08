@@ -19,13 +19,13 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ## Repository Structure & Projects
 
-### 1. Radiobiology & Biophysical Modeling
+### 1. Artificial Intelligence for Experimental and Applied Physics
 * **Directory:** `AI simulations in physics/`
-* **Description:** Implementation and analysis of biophysical models for radiotherapy and hadrontherapy applications.
+* **Description:** Machine learning-based prediction model for gallstone disease using bioimpedance and laboratory data.
 * **Key Features:**
   *  Random Forest, Gradient Boosting, XGBoost, and CatBoost.
 * **Notebooks:**
-  * [Early prediction of gallstone disease](AI simulations in physics/Proyecto_final.ipynb) 
+  * [Early prediction of gallstone disease](AI%20simulations%20in%20physics/Proyecto_final.ipynb) 
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/main/AI%20simulations%20in%20physics/Proyecto_final.ipynb)
 
 ---
@@ -40,14 +40,17 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ---
 
-### 3. Experimental Physics & Spectroscopic Data Analysis
-* **Directory:** `experimental-data-analysis/`
-* **Description:** Signal processing, thermal diffusivity estimation, and spectrophotometric data analysis.
+### 3. Radiobiology & Biophysical Modeling
+* **Directory:** `Thesis-BIANCA-simulations/`
+* **Description:** Implementation and analysis of biophysical models for radiotherapy and hadrontherapy applications.
 * **Key Features:**
   * Curve fitting for experimental signal decay and characterization of physical properties.
   * Quantitative analysis with uncertainty propagation and error estimation.
+  * Estimation of absorbed dose with different calculation methods for the Isoeffective dose
 * **Notebooks:**
-  * [Thermal & Optical Data Fitting](experimental-data-analysis/spectroscopy_analysis.ipynb)
+  * [Survival function](Thesis-BIANCA-simulations/surv_function.py)
+  * [Radiobiological parameters estimator](Thesis-BIANCA-simulations/analyzer.py)
+  * [Isoeffective Dose Calculations](Thesis-BIANCA-simulations/Diso_vs_Dphys.ipynb)
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/experimental-data-analysis/spectroscopy_analysis.ipynb)
 
 ---
