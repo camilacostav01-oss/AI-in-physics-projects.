@@ -7,7 +7,7 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ---
 
-## 🛠️ Skills & Technologies
+## Skills & Technologies
 
 - **Programming & Analysis:** Python (`NumPy`, `SciPy`, `Matplotlib`, `Pandas`)
 - **Monte Carlo Simulations:** MCNP (Radiation transport and dose scoring)
@@ -17,14 +17,13 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ---
 
-## 📁 Repository Structure & Projects
+## Repository Structure & Projects
 
 ### 🔬 1. Radiobiology & Biophysical Modeling
-* **Directory:** `radiobiology/`
+* **Directory:** `AI simulations/`
 * **Description:** Implementation and analysis of biophysical models for radiotherapy and hadrontherapy applications.
 * **Key Features:**
-  * Linear-Quadratic (LQ) parameter optimization and cell survival curve fitting using `scipy.optimize`.
-  * LET-dependent Relative Biological Effectiveness (RBE) modeling and dose-response evaluations.
+  *  Random Forest, Gradient Boosting, XGBoost, and CatBoost.
 * **Notebooks:**
   * [LET-Dependent RBE Analysis](radiobiology/rbe_let_curve_fitting.ipynb) 
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/radiobiology/rbe_let_curve_fitting.ipynb)
