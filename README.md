@@ -51,11 +51,11 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
   * [Survival function](Thesis-BIANCA-simulations/surv_function.py)
   * [Radiobiological parameters estimator](Thesis-BIANCA-simulations/analyzer.py)
   * [Isoeffective Dose Calculations](Thesis-BIANCA-simulations/Diso_vs_Dphys.ipynb)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/experimental-data-analysis/spectroscopy_analysis.ipynb)
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/camilacostav01-oss/AI-in-physics-projects./blob/main/Thesis-BIANCA-simulations/Diso_vs_Dphys_5.ipynb)
 
 ---
 
-## 🚀 How to Run the Projects
+## How to Run the Projects
 
 ### Running in Google Colab (Recommended)
 You can directly open and execute any Jupyter Notebook in Google Colab by clicking the **"Open in Colab"** badges above next to each project.
