@@ -32,12 +32,11 @@ The projects showcase my work in **medical physics, radiation transport, radiobi
 
 ### ⚛️ 2. Radiation Transport & Monte Carlo Simulations
 * **Directory:** `mcnp-simulations/`
-* **Description:** Configuration and post-processing of Monte Carlo radiation transport simulations.
+* **Description:** Configuration of Monte Carlo radiation transport simulations.
 * **Key Features:**
-  * Post-processing and visualization of MCNP tally outputs (fluence, absorbed dose, and secondary particle spectra)..
+  * Creation of a geometry and visualization of MCNP tally outputs (fluence, absorbed dose, and secondary particle spectra)
 * **Notebooks / Scripts:**
-  * [MCNP Tally Data Extractor & Plotter](mcnp-simulations/radiation-soft tissue)
-  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/blob/main/mcnp-simulations/mcnp_tally_parser.ipynb)
+  * [MCNP Tally Data Extractor & Plotter](mcnp-simulations/radiation-soft-tissue)
 
 ---
 
