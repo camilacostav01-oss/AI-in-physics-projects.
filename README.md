@@ -3,6 +3,12 @@
 
 Welcome to my portfolio repository. This repository contains a collection of computational physics models, data analysis scripts, and biophysical simulations developed during my graduate studies, as well as independent research projects.
 
+## 🧬 About Me
+
+I am a Master's student in Physics (*Scienze Fisiche*) at the **University of Pavia**, specializing in computational medical physics, radiation transport, and radiobiological modeling. 
+
+My current research focuses on **Boron Neutron Capture Therapy (BNCT)** simulations and the biophysical characterization of LET-dependent radiation damage using models like **BIANCA**. I develop computational scripts in **Python** and run Monte Carlo simulations (**MCNP**) to analyze particle transport, dose deposition, and energy spectra in biological tissues.
+
 The projects showcase my work in **medical physics, radiation transport, radiobiological modeling, and data visualization**.
 
 ---
