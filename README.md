@@ -3,7 +3,7 @@
 
 Welcome to my portfolio repository. This repository contains a collection of computational physics models, data analysis scripts, and biophysical simulations developed during my graduate studies, as well as independent research projects.
 
-## 🧬 About Me
+## About Me
 
 I am a Master's student in Physics (*Scienze Fisiche*) at the **University of Pavia**, specializing in computational medical physics, radiation transport, and radiobiological modeling. 
 
